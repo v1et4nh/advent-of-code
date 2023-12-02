@@ -7,7 +7,7 @@ def get_first_and_last_digit(str_line):
         .replace('seven', 'seven7seven').replace('eight', 'eight8eight').replace('nine', 'nine9nine')
 
     list_num = list(map(int, re.findall(r'\d', str_line)))
-    str_num = str(list_num[0]) + str(list_num[-1])
+    str_num  = str(list_num[0]) + str(list_num[-1])
     return int(str_num)
 
 
