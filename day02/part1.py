@@ -1,11 +1,11 @@
 import re
 
 
-def get_possible_id(line):
-    game, sets = line.split(':')
+def get_possible_id(text_line):
+    game, sets = text_line.split(':')
     sets = sets.split(';')
-    for set in sets:
-        cubes = set.split(',')
+    for subset in sets:
+        cubes = subset.split(',')
         for cube in cubes:
             if 'red' in cube:
                 counter = list(map(int, re.findall(r'\d+', cube)))[0]
