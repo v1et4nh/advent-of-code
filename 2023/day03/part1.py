@@ -8,7 +8,7 @@ def get_total_sum(engine_arr):
         tmp_row = tmp_row.replace('.', '').replace('\n', '')
         list_symbol = list(tmp_row)
         engine_dict[idx_row] = {'idx_symbol': [],
-                              'idx_num': {m.start(0):int(m.group(0)) for m in re.finditer("\d+", engine_row)}}
+                                'idx_num': {m.start(0):int(m.group(0)) for m in re.finditer("\d+", engine_row)}}
         tmp_symbol_arr = []
         for symbol in list_symbol:
             tmp_symbol_arr.append([i for i, ltr in enumerate(engine_row) if ltr == symbol])
