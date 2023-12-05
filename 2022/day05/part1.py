@@ -19,8 +19,7 @@ def get_top_stack(move_arr):
         step = list(map(int, re.findall(r'\d+', move)))
         for i in range(step[0]):
             new_stack[step[2]-1].append(new_stack[step[1]-1].pop())
-            # print(new_stack)
-    print([row[-1] for row in new_stack])
+    print(''.join([row[-1] for row in new_stack]))
 
 
 if __name__ == '__main__':
