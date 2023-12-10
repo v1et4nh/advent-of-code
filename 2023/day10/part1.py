@@ -1,55 +1,55 @@
-import numpy as np
+from numpy import add, subtract
 
 
 if __name__ == '__main__':
-    puzzle_input = open('puzzle_input.txt', 'r')
-    lines = puzzle_input.readlines()
-    lines = [line.replace('\n', '') for line in lines]
+    with open('puzzle_input.txt', 'r') as file:
+        lines = [l.strip() for l in file]
 
-    # Get starting position
+    # Init
     start_row = [i for i, l in enumerate(lines) if 'S' in l][0]
-    start_col = [i for i, l in enumerate(lines[start_row]) if 'S' in l][0]
-    start = (start_row, start_col)
-    dir_1 = [start]
-    pos_arr = ['S']
+    start_col = lines[start_row].find('S')
+    start     = (start_row, start_col)
+    dir_arr   = [start]
+    pos_arr   = ['S']
 
     current_pos = start
-    # First
-    while dir_1.count(start) == 1:
-        north = tuple(np.subtract(current_pos, (1, 0)))
-        east  = tuple(np.add(current_pos, (0, 1)))
-        south = tuple(np.add(current_pos, (1, 0)))
-        west  = tuple(np.subtract(current_pos, (0, 1)))
+    while dir_arr.count(start) == 1:
+        north = tuple(subtract(current_pos, (1, 0)))
+        east  = tuple(add(current_pos, (0, 1)))
+        south = tuple(add(current_pos, (1, 0)))
+        west  = tuple(subtract(current_pos, (0, 1)))
+        directions = [north, east, south, west]
+
         if north[0] < len(lines) and north[1] < len(lines[0]):
             if lines[north[0]][north[1]] in ['S', '|', '7', 'F'] \
                     and pos_arr[-1] in ['S', '|', 'L', 'J'] \
-                    and (north not in dir_1 or (north == start and len(dir_1) > 2)):
-                dir_1.append((north[0], north[1]))
+                    and (north not in dir_arr or (north == start and len(dir_arr) > 2)):
+                dir_arr.append((north[0], north[1]))
                 current_pos = north
                 pos_arr.append(lines[north[0]][north[1]])
                 continue
         if east[0] < len(lines) and east[1] < len(lines[0]):
             if lines[east[0]][east[1]] in ['S', '-', 'J', '7'] \
                     and pos_arr[-1] in ['S', '-', 'L', 'F'] \
-                    and (east not in dir_1 or (east == start and len(dir_1) > 2)):
-                dir_1.append((east[0], east[1]))
+                    and (east not in dir_arr or (east == start and len(dir_arr) > 2)):
+                dir_arr.append((east[0], east[1]))
                 current_pos = east
                 pos_arr.append(lines[east[0]][east[1]])
                 continue
         if south[0] < len(lines) and south[1] < len(lines[0]):
             if lines[south[0]][south[1]] in ['S', '|', 'L', 'J'] \
                     and pos_arr[-1] in ['S', '|', '7', 'F'] \
-                    and (south not in dir_1 or (south == start and len(dir_1) > 2)):
-                dir_1.append((south[0], south[1]))
+                    and (south not in dir_arr or (south == start and len(dir_arr) > 2)):
+                dir_arr.append((south[0], south[1]))
                 current_pos = south
                 pos_arr.append(lines[south[0]][south[1]])
                 continue
         if west[0] < len(lines) and west[1] < len(lines[0]):
             if lines[west[0]][west[1]] in ['S', '-', 'L', 'F'] \
                     and pos_arr[-1] in ['S', '-', 'J', '7'] \
-                    and (west not in dir_1 or (west == start and len(dir_1) > 2)):
-                dir_1.append((west[0], west[1]))
+                    and (west not in dir_arr or (west == start and len(dir_arr) > 2)):
+                dir_arr.append((west[0], west[1]))
                 current_pos = west
                 pos_arr.append(lines[west[0]][west[1]])
 
-    print((len(dir_1)-1)//2)
+    print((len(dir_arr)-1)//2)
