@@ -2,29 +2,29 @@ from numpy import subtract
 
 if __name__ == '__main__':
     with open('puzzle_input.txt', 'r') as file:
-        lines = [l.strip() for l in file]
+        data = [l.strip() for l in file]
 
-    orig_lines = lines.copy()
+    orig_lines = data.copy()
 
     # double row
-    new_lines = []
-    for l in lines:
-        new_lines.append(l)
+    new_data = []
+    for l in data:
+        new_data.append(l)
         if list(set(l)) == ['.']:
             for i in range(2-1):
-                new_lines.append(l)
-    lines = new_lines.copy()
+                new_data.append(l)
+    data = new_data.copy()
     # double col
     idx_arr = []
-    new_lines = ['' for j in range(len(lines))]
-    for i in range(len(lines[0])):
-        if list(set(''.join([row[i] for row in lines]))) == ['.']:
+    new_lines = ['' for j in range(len(data))]
+    for i in range(len(data[0])):
+        if list(set(''.join([row[i] for row in data]))) == ['.']:
             idx_arr.append(i)
-            for j in range(len(lines)):
-                new_lines[j] += lines[j][i]*2
+            for j in range(len(data)):
+                new_lines[j] += data[j][i]*2
         else:
-            for j in range(len(lines)):
-                new_lines[j] += lines[j][i]
+            for j in range(len(data)):
+                new_lines[j] += data[j][i]
 
     # get index of #
     count = 1

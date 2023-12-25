@@ -1,9 +1,9 @@
 if __name__ == '__main__':
-    puzzle_input = open('puzzle_input.txt', 'r')
-    lines = puzzle_input.readlines()
+    data = open('puzzle_input.txt', 'r')
+    data = data.readlines()
     total_sum = 0
-    for line in lines:
-        card_row, numbers_row = line.replace('\n', '').split(':')
+    for d in data:
+        card_row, numbers_row = d.replace('\n', '').split(':')
         winning_row, my_row   = numbers_row.split('|')
         winning_row = winning_row.split(' ')
         my_row = my_row.split(' ')

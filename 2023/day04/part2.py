@@ -1,17 +1,17 @@
 if __name__ == '__main__':
-    puzzle_input = open('puzzle_input.txt', 'r')
-    lines = puzzle_input.readlines()
+    data = open('puzzle_input.txt', 'r')
+    data = data.readlines()
     winning_dict = {}
-    for i in range(len(lines)):
+    for i in range(len(data)):
         winning_dict[i+1] = 1
 
-    for line in lines:
-        card_row, numbers_row = line.replace('\n', '').split(':')
+    for d in data:
+        card_row, numbers_row = d.replace('\n', '').split(':')
         card_row = int(card_row.replace('Card ', ''))
         winning_row, my_row   = numbers_row.split('|')
         winning_row = winning_row.split(' ')
         my_row = my_row.split(' ')
-        match = list(set(winning_row) & set(my_row))
+        match  = list(set(winning_row) & set(my_row))
         match.remove('')
         if len(match) > 0:
             num_cards = winning_dict[card_row]

@@ -2,12 +2,12 @@ import numpy as np
 
 
 if __name__ == '__main__':
-    puzzle_input = open('puzzle_input.txt', 'r')
-    lines = puzzle_input.readlines()
-    lines = [line.replace('\n', '') for line in lines]
+    data = open('puzzle_input.txt', 'r')
+    data = data.readlines()
+    data = [d.replace('\n', '') for d in data]
     total_sum = 0
-    for line in lines:
-        diff_arr = [list([int(l) for l in line.split(' ')])]
+    for d in data:
+        diff_arr = [list([int(l) for l in d.split(' ')])]
         tmp_diff = list(np.diff(diff_arr[-1]))
         while not all(x == 0 for x in tmp_diff):
             diff_arr.append(tmp_diff)

@@ -21,20 +21,20 @@ def get_destination(source, map_lines):
 
 
 if __name__ == '__main__':
-    puzzle_input = open('puzzle_input.txt', 'r')
-    lines   = puzzle_input.readlines()
-    lines   = [line.replace('\n', '') for line in lines]
-    seeds   = list(map(int, re.findall(r'\d+', lines[0])))          # Get list of seeds
-    idx_arr = [i+1 for i, line in enumerate(lines) if line == '']   # Get start_idx of each map
+    data = open('puzzle_input.txt', 'r')
+    data = data.readlines()
+    data = [d.replace('\n', '') for d in data]
+    seeds   = list(map(int, re.findall(r'\d+', data[0])))          # Get list of seeds
+    idx_arr = [i+1 for i, line in enumerate(data) if line == '']   # Get start_idx of each map
 
     # Create maps
-    seed_to_soil_map = lines[idx_arr[0]+1:idx_arr[1]-1]
-    soil_to_fert_map = lines[idx_arr[1]+1:idx_arr[2]-1]
-    fert_to_watr_map = lines[idx_arr[2]+1:idx_arr[3]-1]
-    watr_to_ligh_map = lines[idx_arr[3]+1:idx_arr[4]-1]
-    ligh_to_temp_map = lines[idx_arr[4]+1:idx_arr[5]-1]
-    temp_to_humi_map = lines[idx_arr[5]+1:idx_arr[6]-1]
-    humi_to_loca_map = lines[idx_arr[6]+1:]
+    seed_to_soil_map = data[idx_arr[0]+1:idx_arr[1]-1]
+    soil_to_fert_map = data[idx_arr[1]+1:idx_arr[2]-1]
+    fert_to_watr_map = data[idx_arr[2]+1:idx_arr[3]-1]
+    watr_to_ligh_map = data[idx_arr[3]+1:idx_arr[4]-1]
+    ligh_to_temp_map = data[idx_arr[4]+1:idx_arr[5]-1]
+    temp_to_humi_map = data[idx_arr[5]+1:idx_arr[6]-1]
+    humi_to_loca_map = data[idx_arr[6]+1:]
 
     # Find all loca values
     total_loca = []

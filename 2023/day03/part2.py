@@ -49,10 +49,10 @@ def get_total_sum(engine_arr):
 
 
 if __name__ == '__main__':
-    puzzle_input = open('puzzle_input.txt', 'r')
-    lines = puzzle_input.readlines()
+    data = open('puzzle_input.txt', 'r')
+    data = data.readlines()
     input_array = []
-    for line in lines:
-        input_array.append(line)
-    total_sum = get_total_sum(input_array)
-    print(total_sum)
+    for d in data:
+        input_array.append(d)
+    result = get_total_sum(input_array)
+    print(result)

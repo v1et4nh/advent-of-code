@@ -27,9 +27,9 @@ def get_power_of_game(line):
 
 
 if __name__ == '__main__':
-    puzzle_input = open('puzzle_input.txt', 'r')
-    lines = puzzle_input.readlines()
+    data = open('puzzle_input.txt', 'r')
+    data = data.readlines()
     total_sum = 0
-    for line in lines:
-        total_sum += get_power_of_game(line)
+    for d in data:
+        total_sum += get_power_of_game(d)
     print(total_sum)

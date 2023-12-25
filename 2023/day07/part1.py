@@ -1,13 +1,13 @@
 if __name__ == '__main__':
-    puzzle_input = open('puzzle_input.txt', 'r')
-    lines = puzzle_input.readlines()
-    lines = [line.replace('\n', '') for line in lines]
-    max_rank = len(lines)
+    data = open('puzzle_input.txt', 'r')
+    data = data.readlines()
+    data = [d.replace('\n', '') for d in data]
+    max_rank = len(data)
     cards = []
     bids  = []
     type_arr = []
-    for line in lines:
-        card, bid = line.split(' ')
+    for d in data:
+        card, bid = d.split(' ')
         cards.append(card.replace('A', 'Z').replace('K', 'Y').replace('Q', 'X').replace('J', 'W'))
         bids.append(int(bid))
         if len(set(card)) == 1:  # Five of a kind

@@ -12,9 +12,9 @@ def get_first_and_last_digit(str_line):
 
 
 if __name__ == '__main__':
-    puzzle_input = open('puzzle_input.txt', 'r')
-    lines = puzzle_input.readlines()
+    data = open('puzzle_input.txt', 'r')
+    data = data.readlines()
     total_sum = 0
-    for line in lines:
-        total_sum += get_first_and_last_digit(line)
+    for d in data:
+        total_sum += get_first_and_last_digit(d)
     print(total_sum)
