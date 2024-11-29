@@ -4,7 +4,7 @@
 
 Please share your thoughts and connect with me on [linkedin](https://linkedin.com/in/viet-anh-le-cong) 
 
-Viet Anh Le Cong - [@linkedin](https://linkedin.com/in/viet-anh-le-cong) - hello@v1et4nh.de
+Viet Anh Le Cong - [@linkedin](https://linkedin.com/in/viet-anh-le-cong) - [mail@v1et4nh.de](mailto:mail@v1et4nh.de)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
