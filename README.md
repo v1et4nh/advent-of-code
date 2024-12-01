@@ -3,7 +3,7 @@ Welcome to my collection of solutions for the **Advent of Code** challenges!
 This repository contains my daily puzzle solutions, showcasing different approaches and techniques to tackle each problem.
 
 ## Bonus: Leaderboard Viewer
-In addition to the solutions, this repository includes a tool to fetch and display data from a private Advent of Code leaderboard.  
+In addition to the solutions, this repository includes a tool to fetch and display data from a private Advent of Code leaderboard. 
 The leaderboard is presented as an interactive HTML file with sortable tables and daily performance breakdowns.
 
 ---
