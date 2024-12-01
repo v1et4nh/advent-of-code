@@ -1,11 +1,17 @@
-# Advent of Code Leaderboard Viewer
+# Advent of Code
+Welcome to my collection of solutions for the **Advent of Code** challenges!  
+This repository contains my daily puzzle solutions, showcasing different approaches and techniques to tackle each problem.
 
-A script to fetch, store, and display data from a private Advent of Code leaderboard as an interactive HTML file.
+## Bonus: Leaderboard Viewer
+In addition to the solutions, this repository includes a tool to fetch and display data from a private Advent of Code leaderboard.  
+The leaderboard is presented as an interactive HTML file with sortable tables and daily performance breakdowns.
 
 ---
 
-## Requirements
+# Advent of Code Leaderboard Viewer
+A script to fetch, store, and display data from a private Advent of Code leaderboard as an interactive HTML file.
 
+## Requirements
 - **Python 3.8+**
 - Libraries: `pandas`, `requests`, `python-dotenv`  
   Install with:
@@ -13,31 +19,25 @@ A script to fetch, store, and display data from a private Advent of Code leaderb
   pip install pandas requests python-dotenv
 
 ## Setup
-
 1. **Clone the Repository**  
    Download the script and extract it.
-
 2. **Get Your Leaderboard URL**  
    Copy the URL of your private leaderboard (e.g., `https://adventofcode.com/2024/leaderboard/private/view/123456.json`).
-
 3. **Obtain Session Cookie**  
    - Log in to [Advent of Code](https://adventofcode.com).  
    - Open your browser’s developer tools (`F12`).  
    - Find the `session` cookie in the `Cookies` section.
-
 4. **Create a `.env` File**  
    Add your leaderboard URL and session cookie to a `.env` file in the same directory:
    ```plaintext
    LEADERBOARD_URL=<your-leaderboard-url, e.g. https://adventofcode.com/2024/leaderboard/private/view/123456.json>
    SESSION_COOKIE=<your-session-cookie>
-
+   ```
 
 ## Usage
-
 1. **Run the Script**  
    ```bash
-   python <script_name>.py
-   
+   python get_private_leaderboard.py
 2. **View the HTML**  
    Open the generated `leaderboard.html` file in your browser.
 
@@ -50,7 +50,6 @@ A script to fetch, store, and display data from a private Advent of Code leaderb
 
 
 ## Example Output
-
 ### Total View
 | Rank | Name   | Stars | Local Score |
 |------|--------|-------|-------------|
