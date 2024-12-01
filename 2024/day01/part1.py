@@ -4,8 +4,8 @@ if __name__ == '__main__':
     list_1, list_2 = [], []
     for l in lines:
         tmp = l.split(' ')
-        list_1.append(int(int(tmp[0])))
-        list_2.append(int(int(tmp[-1].replace('\n', ''))))
+        list_1.append(int(tmp[0]))
+        list_2.append(int(tmp[-1].replace('\n', '')))
     list_1 = sorted(list_1)
     list_2 = sorted(list_2)
     total_distance = 0
