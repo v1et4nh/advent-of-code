@@ -1,5 +1,5 @@
 # Advent of Code
-Welcome to my collection of solutions for the **Advent of Code** challenges!  
+Welcome to my collection of solutions for the **Advent of Code** challenges! 
 This repository contains my daily puzzle solutions, showcasing different approaches and techniques to tackle each problem.
 
 ## Bonus: Leaderboard Viewer
