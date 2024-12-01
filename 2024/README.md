@@ -44,7 +44,7 @@ A script to fetch, store, and display data from a private Advent of Code leaderb
 
 ## Customization
 1. **Update Interval**  
-   Change the `update_interval` variable in the script (default: 15 minutes).
+   Change the `update_interval` variable in the script (default: 15 minutes). This keeps the requests limited.
 2. **Timezone**  
    Adjust the `.dt.tz_convert('Europe/Berlin')` line in the script to your desired timezone.
 
