@@ -1,7 +1,7 @@
 import numpy as np
 
 if __name__ == '__main__':
-    puzzle_input = open('puzzle_input.txt', 'r')
+    puzzle_input = open('input.txt', 'r')
     lines = puzzle_input.readlines()
     total = 0
     for l in lines:
