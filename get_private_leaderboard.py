@@ -153,10 +153,11 @@ def generate_html_with_tabs(data, file_path):
 
         # Sort by Total Points in descending order
         df = df.sort_values(by="Total Points", ascending=False)
+        df.insert(0, "Rank", total_df.index + 1)
 
         # Rearrange columns in the desired order
         df = df[[
-            "Name", "Part 1 Rank", "Part 1 Points",
+            "Rank", "Name", "Part 1 Rank", "Part 1 Points",
             "Part 2 Rank", "Part 2 Points", "Total Points",
             "Part 1 Time", "Part 2 Time"
         ]]
